@@ -1,5 +1,5 @@
 {
-  description = "Hjalmars NixOS GitOps Infrastruktur";
+  description = "NixOS Infrastructure";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
