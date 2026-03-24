@@ -36,6 +36,5 @@
       iptables -A INPUT -i wg0 -j ACCEPT
       iptables -I OUTPUT 1 -o wg0 -j ACCEPT
     '';
-    };
   };
-};
+}
