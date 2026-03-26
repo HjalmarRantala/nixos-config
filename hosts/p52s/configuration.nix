@@ -14,6 +14,7 @@
       ../../common/ssh.nix
       ../../common/vpn.nix
       ../../common/dns.nix
+      ../../common/deployment.nix
     ]
     ++
     (if builtins.pathExists ../../local/p52s then [ ../../local/p52s ] else []);
