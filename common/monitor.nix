@@ -28,4 +28,5 @@ services.prometheus = {
       };
     };
   };
+  networking.firewall.allowedTCPPorts = [ 3000 ];
 }
