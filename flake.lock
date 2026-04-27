@@ -16,9 +16,30 @@
         "type": "github"
       }
     },
+    "openclaw": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771853299,
+        "narHash": "sha256-RBW6MvUITjh4nJW8Xo5NBk5pxrlpKqGUVoTxsDPwXbo=",
+        "owner": "Scout-DJ",
+        "repo": "openclaw-nix",
+        "rev": "a6782a4de832339d49f0811f73eacd4e44e1d753",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Scout-DJ",
+        "repo": "openclaw-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
+        "openclaw": "openclaw",
         "sops-nix": "sops-nix"
       }
     },
