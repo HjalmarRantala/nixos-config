@@ -15,7 +15,7 @@
       ../../common/vpn.nix
       ../../common/dns.nix
       ../../common/deployment.nix
-      ../../common/monitor.nix
+      #../../common/monitor.nix
       ../../common/ai.nix
     ]
     ++
