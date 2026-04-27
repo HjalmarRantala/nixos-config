@@ -7,9 +7,13 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    openclaw  = {
+      url = "github:Scout-DJ/openclaw-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, sops-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, sops-nix, openclaw, ... }@inputs: {
 
     nixosConfigurations = {
       p52s = nixpkgs.lib.nixosSystem {
