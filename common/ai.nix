@@ -8,7 +8,6 @@
       "gemma4:26b"
       "qwen3.5:9b"
     ];
-    syncModels = true;
     port = 11434;
   };
 }
