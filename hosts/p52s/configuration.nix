@@ -16,6 +16,7 @@
       ../../common/dns.nix
       ../../common/deployment.nix
       ../../common/monitor.nix
+      ../../common/ai.nix
     ]
     ++
     (if builtins.pathExists ../../local/p52s then [ ../../local/p52s ] else []);
