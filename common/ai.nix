@@ -9,4 +9,13 @@
     ];
     port = 11434;
   };
+  services.open-webui = {
+    enable = true;
+    port = 3000;     
+    environment = {
+      OLLAMA_BASE_URL = "http://10.100.0.1:11434";
+    };
+  };
+
+  networking.firewall.allowedTCPPorts = [ 3000 ];
 }
