@@ -14,6 +14,7 @@
     port = 3000;     
     environment = {
       OLLAMA_BASE_URL = "http://10.100.0.1:11434";
+      HOST = "0.0.0.0";
     };
   };
 
