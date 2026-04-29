@@ -39,6 +39,9 @@
     description = "Hjalmar";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIrcGnwDW6OLoN5q/Fmyle/CYdUhB0D3YD+4D2++kO0c hjalmar@hjalmarT480"
+    ];
   };
 
   # Allow unfree packages
