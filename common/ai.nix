@@ -6,6 +6,8 @@
     openFirewall = true;
     loadModels = [
       "gemma4:26b"
+      "gemma4:e2b"
+      "gemma4:e4b"
     ];
     port = 11434;
   };
