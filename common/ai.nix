@@ -6,8 +6,7 @@
     openFirewall = true;
     loadModels = [
       "gemma4:26b"
-      "gemma4:e2b"
-      "gemma4:e4b"
+      "gpt-oss:20b"
     ];
     port = 11434;
   };
