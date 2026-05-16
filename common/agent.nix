@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 }
+  environment.systemPackages = [
+    inputs.openclaw.packages.${pkgs.system}.default
+  ];
   programs.openclaw = {
     enable = true;
     
