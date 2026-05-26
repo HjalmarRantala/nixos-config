@@ -16,7 +16,7 @@
 
     settings = {
       model = {
-        default = "openai-codex";
+        default = "gpt-5.4";
         provider = "openai-codex";
       };
       providers.openai-codex.enabled = true;
