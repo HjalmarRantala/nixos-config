@@ -15,7 +15,10 @@
     };
 
     settings = {
-      model.default = "openai-codex";
+      model = {
+        default = "openai-codex";
+        provider = "openai-codex";
+      };
       providers.openai-codex.enabled = true;
     };
   };
