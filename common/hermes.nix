@@ -16,4 +16,11 @@
 
     settings.model.default = "openai-codex";
   };
+  security.sudo.extraRules = [{
+    users = [ "hjalmar" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/docker";
+      options = [ "NOPASSWD" ];
+    }];
+  }];
 }
