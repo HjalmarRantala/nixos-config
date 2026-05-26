@@ -14,7 +14,10 @@
       hostUsers = [ "hjalmar" ]; 
     };
 
-    settings.model.default = "openai-codex";
+    settings = {
+      model.default = "openai-codex";
+      providers.openai-codex.enabled = true;
+    };
   };
   security.sudo.extraRules = [{
     users = [ "hjalmar" ];
