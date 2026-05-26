@@ -7,13 +7,13 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    openclaw  = {
-      url = "github:openclaw/nix-openclaw";
+    hermes-agent = {
+      url = "github:NousResearch/hermes-agent";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, sops-nix, openclaw, ... }@inputs: {
+  outputs = { self, nixpkgs, sops-nix, hermes-agent, ... }@inputs: {
 
     nixosConfigurations = {
       p52s = nixpkgs.lib.nixosSystem {
@@ -21,6 +21,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           sops-nix.nixosModules.sops
+          hermes-agent.nixosModules.default
           ./hosts/p52s/configuration.nix
         ];
       };
