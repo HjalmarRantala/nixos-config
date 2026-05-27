@@ -48,10 +48,22 @@
   systemd.services.hermes-agent.serviceConfig = {
     User = lib.mkForce "hermes-runner";
     Group = lib.mkForce "users";
-    # Turn off the read-only bind mount so standard Linux permissions apply
     ProtectHome = lib.mkForce false; 
     ReadWritePaths = [ 
       "/home/hermes-runner" 
     ];
+  };
+
+  services.open-webui = {
+    enable = true;
+    port = 8080; 
+    
+    environment = {
+      OPENAI_API_BASE_URL = "http://127.0.0.1:56121/v1"; 
+      
+      ENABLE_OLLAMA_API = "False"; 
+      
+      WEBUI_AUTH = "False"; 
+    };
   };
 }
