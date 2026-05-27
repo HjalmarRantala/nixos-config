@@ -1,5 +1,4 @@
 { config, pkgs, lib, ... }:
-
 {
   services.hermes-agent = {
     enable = true;
@@ -48,22 +47,5 @@
       curl
       statix
     ];
-    openssh.authorizedKeys.keys = [];
   };
-
-  systemd.services.hermes-agent.serviceConfig = {
-    User = lib.mkForce "hermes-runner";
-    Group = lib.mkForce "users";
-    ProtectHome = lib.mkForce "read-only"; 
-    ReadWritePaths = [ 
-      "/home/hermes-runner" 
-    ];
-  };
-
-  systemd.tmpfiles.rules = [
-    # Format: Type  Path  Mode  User  Group  Age  Argument
-    "d /home/hermes-runner 0750 hermes-runner users - -"
-    "d /home/hermes-runner/.hermes 0750 hermes-runner users - -"
-    "d /home/hermes-runner/workspace 0750 hermes-runner users - -"
-  ];
 }
