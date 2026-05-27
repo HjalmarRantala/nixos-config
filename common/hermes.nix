@@ -59,4 +59,11 @@
       "/home/hermes-runner" 
     ];
   };
+
+  systemd.tmpfiles.rules = [
+    # Format: Type  Path  Mode  User  Group  Age  Argument
+    "d /home/hermes-runner 0750 hermes-runner users - -"
+    "d /home/hermes-runner/.hermes 0750 hermes-runner users - -"
+    "d /home/hermes-runner/workspace 0750 hermes-runner users - -"
+  ];
 }
