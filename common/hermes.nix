@@ -2,6 +2,7 @@
 {
   services.hermes-agent = {
     enable = true;
+    container.enable = false;
     addToSystemPackages = true; 
     
     environmentFiles = [
@@ -10,11 +11,6 @@
 
     stateDir = "/home/hermes-runner/.hermes";
     workingDirectory = "/home/hermes-runner/workspace";
-
-    container = {
-      enable = true;
-      hostUsers = [ "hjalmar" ]; 
-    };
 
     settings = {
       model = {
