@@ -48,4 +48,14 @@
       statix
     ];
   };
+
+  systemd.services.hermes-agent.serviceConfig = {
+    User = lib.mkForce "hermes-runner";
+    Group = lib.mkForce "users";
+    # Turn off the read-only bind mount so standard Linux permissions apply
+    ProtectHome = lib.mkForce false; 
+    ReadWritePaths = [ 
+      "/home/hermes-runner" 
+    ];
+  };
 }
